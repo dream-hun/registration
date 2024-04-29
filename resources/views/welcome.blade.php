@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Marcegaglia Vocational Training Center- Home</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=Inter:400,600&display=swap" rel="stylesheet" />
+    <title>Marcegaglia Vocational Training Center- Home</title>
 
-        <!-- Styles -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="antialiased font-sans">
-        <div class="relative bg-gray-50 overflow-hidden">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=Inter:400,600&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+
+<body class="antialiased font-sans">
+    <div class="relative bg-gray-50 overflow-hidden">
         <div class="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full" aria-hidden="true">
             <div class="relative h-full max-w-7xl mx-auto">
                 <svg class="absolute right-full transform translate-y-1/4 translate-x-1/4 lg:translate-x-1/2"
@@ -47,7 +49,8 @@
                         <div class="flex items-center justify-between w-full md:w-auto">
                             <a href="">
                                 <span class="sr-only">Registration</span>
-                                <img class="h-12 w-auto sm:h-12" src="https://fmorwanda.org/wp-content/uploads/2022/10/logo.png" alt="">
+                                <img class="h-12 w-auto sm:h-12"
+                                    src="https://fmorwanda.org/wp-content/uploads/2022/10/logo.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -58,12 +61,14 @@
                         <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                             <span class="block">Join our TVET School</span>
                         </h1>
-                        <p class="mt-3 max-w-md mx-auto text-base text-gray-700 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                            Join our cause in order to build a world where social inequalities are increasingly
-                            reduced and the role of
-                            women is valued.
+                        <p
+                            class="mt-3 max-w-md mx-auto text-base text-gray-700 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                            Register in Marcegaglia Vocational Training Center for September 2024 Intake, and start your
+                            journey to success.
+                            We accept all genders, we have accommodations for both male and female students. You can
+                            also choose to take a day program.
                         </p>
-                        
+
                     </div>
                 </div>
             </div>
@@ -74,13 +79,11 @@
                         <div class="max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex">
                             <div class="flex-1 bg-white px-6 py-8 lg:p-12">
                                 @csrf
-                                <h3 class="text-2xl font-extrabold text-gray-900 sm:text-3xl">Volunteer Application</h3>
-                                <p class="mt-6 text-base text-gray-700">
-                                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
-                                    commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
-                                </p>
+                                <h3 class="text-2xl font-extrabold text-gray-900 sm:text-3xl">Register for September
+                                    2024 Intake</h3>
+
                                 <div class="mt-8">
-                                   <livewire:registration-component />
+                                    <livewire:registration-component />
                                 </div>
                             </div>
                         </div>
@@ -89,5 +92,6 @@
             </div>
         </div>
     </div>
-    </body>
+</body>
+
 </html>

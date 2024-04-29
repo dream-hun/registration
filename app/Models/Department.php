@@ -11,7 +11,7 @@ class Department extends Model
     use HasFactory,SoftDeletes;
 
     protected $fillable = [
-      'name',  
-      'status',
+        'name',
+        'status',
     ];
 }

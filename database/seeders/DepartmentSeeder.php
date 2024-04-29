@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\Department;
+use Illuminate\Database\Seeder;
 
 class DepartmentSeeder extends Seeder
 {
@@ -16,32 +15,32 @@ class DepartmentSeeder extends Seeder
         $projects = [
             [
                 'name' => 'Masonry',
-                'status'=>'active',
+                'status' => 'active',
                 'created_at' => now(),
             ],
             [
                 'name' => 'Hairdressing',
-                'status'=>'active',
+                'status' => 'active',
                 'created_at' => now(),
             ],
             [
                 'name' => 'Tailoring',
-                'status'=>'active',
+                'status' => 'active',
                 'created_at' => now(),
             ],
             [
                 'name' => 'Welding',
-                'status'=>'active',
+                'status' => 'active',
                 'created_at' => now(),
             ],
             [
                 'name' => 'Autoengine Repair',
-                'status'=>'active',
+                'status' => 'active',
                 'created_at' => now(),
             ],
             [
                 'name' => 'Multimedia',
-                'status'=>'active',
+                'status' => 'active',
                 'created_at' => now(),
             ],
 

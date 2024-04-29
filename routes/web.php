@@ -1,15 +1,14 @@
 <?php
 
+use App\Models\User;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Route;
+use App\Notifications\NewApplicationNotification;
 
 Route::view('/', 'welcome');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+Route::get('/notification',function(){
 
-Route::view('profile', 'profile')
-    ->middleware(['auth'])
-    ->name('profile');
-
-require __DIR__.'/auth.php';
+    Notification::send(User::first(), new NewApplicationNotification());
+    
+});
