@@ -2,6 +2,7 @@
 
 namespace App\Notifications;
 
+use App\Models\Student;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
@@ -10,12 +11,15 @@ class NewApplicationNotification extends Notification
 {
     use Queueable;
 
+    private $student;
+
     /**
      * Create a new notification instance.
      */
-    public function __construct()
+    public function __construct(Student $student)
     {
-        //
+        $this->student=$student;
+
     }
 
     /**
@@ -36,9 +40,8 @@ class NewApplicationNotification extends Notification
         return (new MailMessage)
             ->subject('New Student Application')
             ->greeting('Hello!')
-
-            ->line('Want to register in Semptember 2024 intake.')
-            ->action('Review application', url('/'))
+            ->line($this->student->name.' want to register in Semptember 2024 intake.')
+            ->action('Review application', url('/admin/login'))
             ->salutation('Thank you!');
     }
 
