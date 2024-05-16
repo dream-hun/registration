@@ -14,7 +14,14 @@ class DepartmentResource extends Resource
 {
     protected static ?string $model = Department::class;
 
+    protected static ?string $recordTitleAttribute = 'name';
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    public static function getGloballySearchableAttributes(): array
+    {
+        return ['name', 'status'];
+    }
 
     public static function form(Form $form): Form
     {
