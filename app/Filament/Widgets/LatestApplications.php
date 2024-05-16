@@ -9,9 +9,9 @@ use Filament\Widgets\TableWidget as BaseWidget;
 
 class LatestApplications extends BaseWidget
 {
-    protected static int $sort = 2;
-
     protected int|string|array $columnSpan = 'full';
+
+    protected static ?int $sort = 2;
 
     public function table(Table $table): Table
     {
