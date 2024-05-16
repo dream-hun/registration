@@ -18,7 +18,7 @@ class NewApplicationNotification extends Notification
      */
     public function __construct(Student $student)
     {
-        $this->student=$student;
+        $this->student = $student;
 
     }
 
