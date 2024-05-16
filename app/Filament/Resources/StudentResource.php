@@ -52,8 +52,8 @@ class StudentResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('gender')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('department_id')
-                    ->numeric()
+                Tables\Columns\TextColumn::make('department.name')
+                   ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -73,6 +73,7 @@ class StudentResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
