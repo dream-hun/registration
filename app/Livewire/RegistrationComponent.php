@@ -14,6 +14,7 @@ class RegistrationComponent extends Component
     public $name = '';
 
     #[Rule('email', message: 'Yoo write proper email')]
+    #[Rule('unique:students', message: 'It looks like this e-mail is already in our database')]
     public $email = '';
 
     #[Rule('required', message: 'Yoo write mobile number')]
