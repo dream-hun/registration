@@ -14,13 +14,13 @@ class StatsOverview extends BaseWidget
             Stat::make('Total Students', Student::count())
                 ->description('Total number of all students in all trades')
                 ->descriptionIcon('heroicon-m-arrow-trending-up')
-                ->color('success'),
-            Stat::make('Male students', Student::where('gender','==','male'))
+                ->color('warning'),
+            Stat::make('Male students', Student::where('gender','==','male')->count())
                 ->description('Total number of Male students')
                 ->descriptionIcon('heroicon-m-arrow-trending-down')
                 ->color('info'),
-            Stat::make('Average time on page', '3:12')
-                ->description('3% increase')
+            Stat::make('Female students', Student::where('gender','==','female')->count())
+                ->description('Total number of Female students')
                 ->descriptionIcon('heroicon-m-arrow-trending-up')
                 ->color('success'),
         ];
