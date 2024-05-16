@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\StudentResource\Pages;
+use App\Models\Department;
 use App\Models\Student;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -27,22 +28,27 @@ class StudentResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\Section::make()->schema([
 
-                Forms\Components\TextInput::make('name')
-                    ->required(),
-                Forms\Components\TextInput::make('email')
-                    ->email()
-                    ->required(),
-                Forms\Components\TextInput::make('phone')
-                    ->tel()
-                    ->required(),
-                Forms\Components\TextInput::make('address')
-                    ->required(),
-                Forms\Components\TextInput::make('gender')
-                    ->required(),
-                Forms\Components\TextInput::make('department_id')
-                    ->required()
-                    ->numeric(),
+                    Forms\Components\TextInput::make('name')
+                        ->required(),
+                    Forms\Components\TextInput::make('email')
+                        ->email()
+                        ->unique(),
+                    Forms\Components\TextInput::make('phone')
+                        ->tel()
+                        ->required(),
+                    Forms\Components\TextInput::make('address')
+                        ->required(),
+                    Forms\Components\TextInput::make('gender')
+                        ->required(),
+                    Forms\Components\Select::make('department_id')
+                        ->label('Department')
+                        ->options(Department::all()->pluck('name', 'id'))
+                        ->searchable()
+                        ->required(),
+                ])->columns(2),
+
             ]);
     }
 
