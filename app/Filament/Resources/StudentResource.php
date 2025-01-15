@@ -49,7 +49,7 @@ class StudentResource extends Resource
                         ->required(),
                 ])->columns(2),
 
-            ]);
+            ])->defaultSort('created_at', 'desc');
     }
 
     public static function table(Table $table): Table
@@ -69,9 +69,10 @@ class StudentResource extends Resource
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
+                ->label('Registered At')
                     ->dateTime()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->toggleable(),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()

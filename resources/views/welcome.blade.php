@@ -63,7 +63,7 @@
                         </h1>
                         <p
                             class="mt-3 max-w-md mx-auto text-base text-gray-700 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                            Register in Marcegaglia Vocational Training Center for September 2024 Intake, and start your
+                            Register in Marcegaglia Vocational Training Center for March 2025 Intake, and start your
                             journey to success.
                             We accept all genders, we have accommodations for both male and female students. You can
                             also choose to take a day program.
